@@ -3,7 +3,7 @@
 
 ### Cartpole Control
 
-This task involved writing a PID controller for the wheel of the cartpole,such that the inverted pendulum is balanced in a vertial upright position
+This task involved writing a PID controller for the wheel of the cartpole,such that the inverted pendulum is balanced in a vertical upright position
 This task consisted of 5 files. They were as follows:
 
 #### system_param.m
@@ -27,7 +27,7 @@ Here we had to make a PID controller for a Multirotor restricted to move in the 
 This task consisted of a folder of trajectories(the sine, the diamond, the step and the line),a folder of utility functions, a evaluate function and 4 other matlab functions.
 
 #### controller.m
-The parameters of the system, the mass of the quadrotor, the accelaration due to gravity and its moment of inertia along with the present state of the quadrotor(which have been specified in the sys_eom.m file) have been utilised. The two functions have then been calculated using the equations of physics. The constants have been found out through repeated iterations and have been applied to the system to generate the force and tprque functions.
+The parameters of the system, the mass of the quadrotor, the acceleration due to gravity and its moment of inertia along with the present state of the quadrotor(which have been specified in the sys_eom.m file) have been utilised. The two functions have then been calculated using the equations of physics. The constants have been found out through repeated iterations and have been applied to the system to generate the force and torque functions.
 
 #### submit.m
 This function uses the controller function as the control handle
@@ -41,7 +41,7 @@ This file runs the simulation of the quadrotor following the specified trajector
 
 ### ROS and Turtlesim
 
-This task involved designing and implementing a PID controller on ROS for turtlesim which takes positon and orientation as input from the user and moves the tuttle to the desired location.
+This task involved designing and implementing a PID controller on ROS for turtlesim which takes position and orientation as input from the user and moves the turtle to the desired location.
 
 #### controller.py
-This task uses the rospy library. This object oriented python executable script creates a subscriber and a publisher node for communication and control of the turtlebot. The PID control has been used here, for the x-position, the y-position and the angular orientation of the bot. The 'pose_callback' function implements the pid control on the basis of the data that it receives from the 'publish_control_command'. The main function takes the position and orientation as input from the user and tries to make the turtlebot reach that position with the specified orientation.
+This task uses the rospy library. This object-oriented python executable script creates a subscriber and a publisher node for communication and control of the turtlebot. The PID control has been used here, for the x-position, the y-position and the angular orientation of the bot. The 'pose_callback' function implements the pid control on the basis of the data that it receives from the 'publish_control_command'. The main function takes the position and orientation as input from the user and tries to make the turtlebot reach that position with the specified orientation.
