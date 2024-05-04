@@ -22,7 +22,7 @@ This function takes the solution for every time-stamp and prints them individual
 The controller1 is the main function that generates the force function to be applied to the wheel of the cart in order to stabilise the pendulum in the vertically upright position. It first value of theta( that is the angle the pendulum makes with the upright vertical) and finds the error in the angle of the pendulum by calculating its difference with the desired value( that is 0, the vertically upright position). The values of Kp(the proportional constant),Kd(the derivative constant) and Ki(the integral constant) follow. The following values have been found suitable for the control function. The control function 'u' is then calculated and is returned from the given function.
 
 
-### Multirotor Control
+### 2D-Multirotor Control
 Here we had to make a PID controller for a Multirotor restricted to move in the YZ plane, that is the plane of the computer screen. The multirotor had to be tuned such that it could follow any specified trajectory.
 This task consisted of a folder of trajectories(the sine, the diamond, the step and the line),a folder of utility functions, a evaluate function and 4 other matlab functions.
 
@@ -39,3 +39,9 @@ This function specifies which trajectory the quadrotor is to follow out of the f
 This file runs the simulation of the quadrotor following the specified trajectory and also plots the y,z and angular position of the quadrotor.It also gives any error message(if any) and thus helps in assessing the control force and torque that is applied to the quadrotor.
 
 
+### ROS and Turtlesim
+
+This task involved designing and implementing a PID controller on ROS for turtlesim which takes positon and orientation as input from the user and moves the tuttle to the desired location.
+
+#### controller.py
+This task uses the rospy library. This object oriented python executable script creates a subscriber and a publisher node for communication and control of the turtlebot. The PID control has been used here, for the x-position, the y-position and the angular orientation of the bot. The 'pose_callback' function implements the pid control on the basis of the data that it receives from the 'publish_control_command'. The main function takes the position and orientation as input from the user and tries to make the turtlebot reach that position with the specified orientation.
