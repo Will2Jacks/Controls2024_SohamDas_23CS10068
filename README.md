@@ -20,5 +20,5 @@ This function takes the solution for every time-stamp and prints them individual
 #### controller1.m
 The controller1 is the main function that generates the force function to be applied to the wheel of the cart in order to stabilise the pendulum in the vertically upright position. It first value of theta( that is the angle the pendulum makes with the upright vertical) and finds the error in the angle of the pendulum by calculating its difference with the desired value( that is 0, the vertically upright position). The values of Kp(the proportional constant),Kd(the derivative constant) and Ki(the integral constant) follow. The following values have been found suitable for the control function. The control function 'u' is then calculated and is returned from the given function.
 
-$$u_theta=Kp_theta*error_theta+Ki_theta*integral_term_theta+Kd_theta*(error_theta-prev_error_theta)$$
+
 
